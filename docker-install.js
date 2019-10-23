@@ -8,7 +8,7 @@ yapi2.connect = dbModule2.connect()
 
 yapi2.connect.then(() => {
     yapi2.getInst(userModel2).findByEmail(yapi2.WEBCONFIG.adminAccount).then(res => {
-	if (res) {
+        if (res) {
             console.log(`已存在管理员,账号:"${yapi2.WEBCONFIG.adminAccount}",密码请询问数据库管理员`)
             process.exit(0)
         } else {
