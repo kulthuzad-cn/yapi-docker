@@ -4,7 +4,7 @@ const userModel2 = require('./models/user.js')
 const commons = require('./utils/commons')
 
 yapi2.commons = commons
-yapi2.connect = dbModule2.connect()
+yapi2.connect = dbModule2.connect((db) => console.log('docker-install 登录数据库成功'))
 
 yapi2.connect.then(() => {
     yapi2.getInst(userModel2).findByEmail(yapi2.WEBCONFIG.adminAccount).then(res => {
