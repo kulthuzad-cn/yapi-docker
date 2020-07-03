@@ -1,6 +1,6 @@
-# zpfield/yapi:0.12
+# zpfield/yapi:0.13
 FROM node:10.16.3-alpine
-ARG version=1.8.5
+ARG version=1.9.2
 WORKDIR /app
 EXPOSE 3000
 # 安装编译工具
