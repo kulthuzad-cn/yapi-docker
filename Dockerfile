@@ -1,6 +1,6 @@
 # zpfield/yapi:0.13
 FROM node:10.16.3-alpine
-ARG version=1.9.2
+ARG version=1.9.3
 WORKDIR /app
 EXPOSE 3000
 # 安装编译工具
@@ -10,7 +10,7 @@ RUN apk add --no-cache python make \
 && tar zxvf ./yapi-vendor-${version}.tgz -C /app \
 && rm ./yapi-vendor-${version}.tgz \
 && cd /app/package \
-&& npm i --production --registry https://registry.npm.taobao.org \
+&& npm i --production --unsafe-perm --registry https://registry.npm.taobao.org \
 && npm cache clean --force \
 && apk del python make
 # 判断数据库是否已有当前管理员用户
