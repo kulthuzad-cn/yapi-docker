@@ -1,4 +1,4 @@
-# zpfield/yapi:0.13
+# zpfield/yapi:0.14
 FROM node:10.16.3-alpine
 ARG version=1.9.3
 WORKDIR /app
